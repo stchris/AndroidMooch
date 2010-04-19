@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:orientation="vertical"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    >
+	<!-- Search for a book -->
+	<TextView  
+	    android:layout_width="fill_parent" 
+	    android:layout_height="wrap_content"
+	    android:text="@string/searchBook" 
+	    android:id="@+id/tvsearchbook"
+	    />    
+	<EditText  
+	    android:layout_width="fill_parent" 
+	    android:layout_height="wrap_content" 
+	    android:id="@+id/searchtext"
+	    />
+	<Button 
+		android:text="@string/btnSearchBook" 
+		android:id="@+id/btnSearchBook" 
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		/>
+		
+	<!-- Search by ASIN -->
+	<TextView  
+	    android:layout_width="fill_parent" 
+	    android:layout_height="wrap_content"
+	    android:text="@string/getBookInfo" 
+	    android:id="@+id/tvgetbookinfo"
+	    />    
+	<EditText  
+	    android:layout_width="fill_parent" 
+	    android:layout_height="wrap_content" 
+	    android:id="@+id/isbntext"
+	    />
+	<Button 
+		android:text="@string/btnGetBookInfo" 
+		android:id="@+id/btnBookInfo" 
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		/>
+</LinearLayout>
