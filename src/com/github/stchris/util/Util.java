@@ -16,7 +16,7 @@ import android.util.Log;
  * Utility methods.
  * 
  * @author chris
- *
+ * 
  */
 public abstract class Util {
 
@@ -24,7 +24,7 @@ public abstract class Util {
 	 * Buffer size for copy operation.
 	 */
 	private static final int IO_BUFFER_SIZE = 4 * 1024;
-	
+
 	/**
 	 * Tag used for logging.
 	 */
@@ -33,11 +33,12 @@ public abstract class Util {
 	/**
 	 * Download an image from the given URL and store it in memory as a Bitmap.
 	 * 
-	 * @param url URL String
+	 * @param url
+	 *            URL String
 	 * @return {@link Bitmap} the image
 	 */
 	public static Bitmap loadBitmap(String url) {
-		if (url == null) {
+		if (url == null || "".equals(url)) {
 			return null;
 		}
 		Bitmap bitmap = null;
@@ -62,23 +63,31 @@ public abstract class Util {
 			Log.e(TAG, e.getMessage());
 		} finally {
 			try {
-				in.close();
-				out.close();
+				if (in != null) {
+					in.close();
+				}
+				if (out != null) {
+					out.close();
+				}
 			} catch (IOException e) {
 				Log.e(TAG, e.getMessage());
 			}
-			
+
 		}
 
 		return bitmap;
 	}
 
 	/**
-	 * Copy the contents of the {@link InputStream} to the given {@link OutputStream}.
+	 * Copy the contents of the {@link InputStream} to the given
+	 * {@link OutputStream}.
 	 * 
-	 * @param in {@link InputStream}
-	 * @param out {@link OutputStream}
-	 * @throws IOException copy fail
+	 * @param in
+	 *            {@link InputStream}
+	 * @param out
+	 *            {@link OutputStream}
+	 * @throws IOException
+	 *             copy fail
 	 */
 	private static void copy(InputStream in, OutputStream out)
 			throws IOException {

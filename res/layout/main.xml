@@ -10,7 +10,18 @@
 	    android:layout_height="wrap_content"
 	    android:text="@string/searchBook" 
 	    android:id="@+id/tvsearchbook"
-	    />    
+	    />
+	<Spinner 
+		android:id="@+id/spinnerSearchEngine" 
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+        />
+    <TextView  
+	    android:layout_width="fill_parent" 
+	    android:layout_height="wrap_content"
+	    android:text="@string/searchBookFor" 
+	    android:id="@+id/tvsearchbookfor"
+	    />
 	<EditText  
 	    android:layout_width="fill_parent" 
 	    android:layout_height="wrap_content" 
@@ -24,12 +35,12 @@
 		/>
 		
 	<!-- Search by ASIN -->
-	<TextView  
+    <TextView  
 	    android:layout_width="fill_parent" 
 	    android:layout_height="wrap_content"
 	    android:text="@string/getBookInfo" 
 	    android:id="@+id/tvgetbookinfo"
-	    />    
+	    />   
 	<EditText  
 	    android:layout_width="fill_parent" 
 	    android:layout_height="wrap_content" 
@@ -41,4 +52,5 @@
 		android:layout_width="fill_parent" 
 		android:layout_height="wrap_content"
 		/>
+
 </LinearLayout>

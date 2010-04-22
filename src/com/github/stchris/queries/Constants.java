@@ -39,6 +39,7 @@ public abstract class Constants {
 	public static final String ISBN_PARAMETER = "book.isbn";
 	public static final String IMAGE_TO_SHOW = "image.to.show";
 	public static final String SEARCH_STRING = "search.string";
+	public static final String SEARCH_ENGINE = "search.engine";
 	
 	/**
 	 TODO add these keys from the asins call

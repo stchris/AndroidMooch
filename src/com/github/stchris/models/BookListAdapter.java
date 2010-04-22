@@ -1,11 +1,17 @@
 package com.github.stchris.models;
 
-import com.github.stchris.views.BookListView;
-
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+
+import com.github.stchris.R;
+import com.github.stchris.util.Util;
 
 public class BookListAdapter extends BaseAdapter {
 
@@ -30,17 +36,24 @@ public class BookListAdapter extends BaseAdapter {
 	}
 
 	public View getView(int position, View convertView, ViewGroup parent) {
-		BookListView bv;
+		final Book book = books[position];
+		RelativeLayout rowLayout = null;
 		if (convertView == null) {
-			Book b = books[position];
-			bv = new BookListView(context, b.title, b.author);
+			rowLayout = (RelativeLayout) LayoutInflater.from(context).inflate(
+					R.layout.booklistview, parent, false);
+			TextView tv = (TextView) rowLayout.findViewById(R.id.tvBookListAuthor);
+			tv.setText(book.author);
+			tv = (TextView) rowLayout.findViewById(R.id.tvBookListTitle);
+			tv.setText(book.title);
+			ImageView img = (ImageView) rowLayout.findViewById(R.id.imgBookList);
+			Bitmap bmp = Util.loadBitmap(book.smallImgUrl);
+			if (bmp != null) {
+				img.setImageBitmap(bmp);
+			};
 		} else {
-			bv = (BookListView) convertView;
-			Book b = books[position];
-			bv.setTitle(b.title);
-			bv.setAuthor(b.author);
+			rowLayout = (RelativeLayout) convertView;
 		}
-		return bv;
+		return rowLayout;
 	}
 
 }
