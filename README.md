@@ -6,15 +6,15 @@ Working so far:
 * get book info by ASIN or ISBN
 * show small cover image in book info view, large image on click
 
-Todo:
+0.1:
+
+* add other search engines
+* move book list item view to .xml layout
+
+Todo for 1.0:
 
 * show user wishlist
 * add book to wishlist
 * book status screen (incoming, outgoing)
 * scan book code
 * get an icon / images from BM
-
-Done:
-
-* add other search engines
-* move book list item view to .xml layout
