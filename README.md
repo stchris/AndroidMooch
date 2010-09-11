@@ -1,5 +1,7 @@
 AndroidMooch - An Android client for the BookMooch book swapping community
 
+License: MIT
+
 Working so far:
 
 * search bookmooch, Amazon (.com, .de, .co.uk, co.jp, .fr, .ca)
