@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">AndroidMooch</string>
+    <string name="btnGetBookInfo">Get book info</string>
+    <string name="getBookInfo">Search BookMooch by ASIN or ISBN:</string>
+    <string name="searchBook">Search on</string>
+    <string name="btnSearchBook">Search</string>
+    <string name="searchBookFor">for</string>
+</resources>

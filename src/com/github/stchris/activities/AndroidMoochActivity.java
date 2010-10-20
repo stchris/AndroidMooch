@@ -40,7 +40,6 @@ public class AndroidMoochActivity extends Activity {
 						"Amazon.co.jp", "Amazon.fr", "Amazon.fr" });
 		spinnerSearchEngine.setAdapter(searchEngineSpinnerAdapter);
 
-		isbnText.setText("0445408499");
 		btnBookInfo.setOnClickListener(new OnClickListener() {
 
 			public void onClick(View v) {
@@ -59,7 +58,7 @@ public class AndroidMoochActivity extends Activity {
 				bookSearchIntent.putExtra(Constants.SEARCH_STRING, searchText
 						.getText().toString());
 				bookSearchIntent.putExtra(Constants.SEARCH_ENGINE,
-						(String) spinnerSearchEngine.getSelectedItem()
+						spinnerSearchEngine.getSelectedItem()
 								.toString());
 				startActivity(bookSearchIntent);
 			}
