@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
       package="com.github.stchris"
       android:versionCode="1" android:versionName="0.1">
-    <application android:label="@string/app_name">
-        <activity android:name="com.github.stchris.activities.AndroidMoochActivity"
+    <application android:label="@string/app_name" android:debuggable="true">
+        <activity android:name=".activities.BookSearchActivity"
                   android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,7 +25,7 @@
 			</intent-filter>
 		</activity>
 		
-		<activity android:name="com.github.stchris.activities.BookSearchActivity">
+		<activity android:name=".activities.BookSearchListActivity">
 			<intent-filter>
 				<action android:name="com.github.stchris.action.BookSearchAction" />
 				<category android:name="android.intent.category.DEFAULT" />
