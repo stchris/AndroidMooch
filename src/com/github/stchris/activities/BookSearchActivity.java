@@ -26,7 +26,7 @@ public class BookSearchActivity extends Activity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.main);
+		setContentView(R.layout.search);
 
 		final EditText isbnText = (EditText) findViewById(R.id.isbntext);
 		final Button btnBookInfo = (Button) findViewById(R.id.btnBookInfo);
